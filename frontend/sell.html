@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sell Grain</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>🌾 Grain Marketplace</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="buy.html">Buy Grain</a>
+            <a href="sell.html">Sell Grain</a>
+            <a href="login.html">Login</a>
+            <a href="my-listings.html">My Listings</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>List Your Grain</h2>
+
+        <form id="sellForm">
+
+            <!-- SELLER NAME -->
+
+            <label for="sellerName">Seller Name</label>
+
+            <input
+                type="text"
+                id="sellerName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <!-- GRAIN -->
+
+            <label for="grainName">Select Grain</label>
+
+            <select id="grainName" required>
+
+                <option value="">Select Grain</option>
+
+                <option value="Wheat">Wheat</option>
+
+                <option value="Rice">Rice</option>
+
+                <option value="Maize">Maize</option>
+
+            </select>
+
+
+            <!-- QUANTITY -->
+
+            <label for="quantity">Quantity (kg)</label>
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Enter quantity"
+                min="1"
+                required
+            >
+
+
+            <!-- PRICE -->
+
+            <label for="price">Price (₹ per kg)</label>
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Enter price"
+                min="1"
+                required
+            >
+
+
+            <button type="submit">
+                List Grain
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
