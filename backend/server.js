@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -16,7 +17,7 @@ app.use(express.json());
 // Yahan apni EXISTING working MongoDB connection string rakho.
 // Apna password kisi ke saath share mat karna.
 
-mongoose.connect("mongodb+srv://choudharirupendra1_db_user:Rupen1234@cluster0.jd9fzxc.mongodb.net/?appName=Cluster0")    .then(function () {
+mongoose.connect(process.env.MONGODB_URI)    .then(function () {
         console.log("MongoDB Connected Successfully!");
     })
     .catch(function (error) {
