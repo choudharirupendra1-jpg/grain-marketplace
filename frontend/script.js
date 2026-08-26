@@ -45,7 +45,7 @@ function buyGrain(grainName, price, quantityId) {
     const total =
         quantity * Number(price);
 
-    fetch("http://localhost:3000/api/orders", {
+    fetch("https://grain-marketplace.onrender.com/api/orders", {
 
         method: "POST",
 
@@ -211,7 +211,7 @@ if (sellForm) {
 
 
             fetch(
-                "http://localhost:3000/api/grains",
+                "https://grain-marketplace.onrender.com/api/grains",
                 {
 
                     method: "POST",
@@ -304,7 +304,7 @@ if (loginForm) {
 
 
             fetch(
-                "http://localhost:3000/api/login",
+                "https://grain-marketplace.onrender.com/api/login",
                 {
 
                     method: "POST",
@@ -405,7 +405,7 @@ if (registerForm) {
 
 
             fetch(
-                "http://localhost:3000/api/register",
+                "https://grain-marketplace.onrender.com/api/register",
                 {
 
                     method: "POST",
@@ -478,7 +478,7 @@ const backendGrains =
 if (backendGrains) {
 
     fetch(
-        "http://localhost:3000/api/grains"
+        "https://grain-marketplace.onrender.com/api/grains"
     )
 
     .then(function (response) {
@@ -623,7 +623,7 @@ function buyBackendGrain(
 
 
     fetch(
-        "http://localhost:3000/api/orders",
+        "https://grain-marketplace.onrender.com/api/orders",
         {
 
             method: "POST",
@@ -811,7 +811,7 @@ if (myListings) {
     } else {
 
         fetch(
-            "http://localhost:3000/api/grains/my?sellerEmail="
+            "https://grain-marketplace.onrender.com/api/grains/my?sellerEmail="
             +
             encodeURIComponent(
                 currentUser.email
@@ -938,7 +938,7 @@ function deleteBackendGrain(id) {
 
 
     fetch(
-        `http://localhost:3000/api/grains/${id}`,
+        `https://grain-marketplace.onrender.com/api/grains/${id}`,
         {
             method: "DELETE"
         }
@@ -1041,7 +1041,7 @@ function editBackendGrain(
 
 
     fetch(
-        `http://localhost:3000/api/grains/${id}`,
+        `https://grain-marketplace.onrender.com/api/grains/${id}`,
         {
 
             method: "PUT",
@@ -1189,7 +1189,7 @@ function confirmOrder() {
 
 
     fetch(
-        `http://localhost:3000/api/orders/${order._id}/confirm`,
+        `https://grain-marketplace.onrender.com/api/orders/${order._id}/confirm`,
         {
 
             method: "PUT",
@@ -1272,7 +1272,7 @@ function cancelOrder() {
 
 
     fetch(
-        `http://localhost:3000/api/orders/${order._id}/cancel`,
+        `https://grain-marketplace.onrender.com/api/orders/${order._id}/cancel`,
         {
 
             method: "PUT",
@@ -1404,7 +1404,7 @@ if (buyerOrders) {
     } else {
 
         fetch(
-            "http://localhost:3000/api/orders/buyer/"
+            "https://grain-marketplace.onrender.com/api/orders/buyer/"
             +
             encodeURIComponent(
                 currentUser.email
@@ -1530,7 +1530,7 @@ if (sellerOrders) {
     } else {
 
         fetch(
-            "http://localhost:3000/api/orders/seller/"
+            "https://grain-marketplace.onrender.com/api/orders/seller/"
             +
             encodeURIComponent(
                 currentUser.email
